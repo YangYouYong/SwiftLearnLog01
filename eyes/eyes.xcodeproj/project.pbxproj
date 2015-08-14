@@ -20,6 +20,12 @@
 		C013CB201B743B3A00AFD797 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C013CB1F1B743B3A00AFD797 /* Info.plist */; };
 		C013CB251B743F1900AFD797 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013CB241B743F1900AFD797 /* VideoModel.swift */; };
 		C013CB281B744DC500AFD797 /* TestServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013CB271B744DC500AFD797 /* TestServiceViewController.swift */; };
+		C013CB301B7C301100AFD797 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013CB2F1B7C301100AFD797 /* TableViewController.swift */; };
+		C013CB351B7C326200AFD797 /* VideoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013CB341B7C326200AFD797 /* VideoViewCell.swift */; };
+		C0ACBBD81B7D66E40082B545 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACBBD71B7D66E40082B545 /* VideoPlayerViewController.swift */; };
+		C0ACBBDD1B7D69360082B545 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0ACBBDC1B7D69360082B545 /* AVFoundation.framework */; };
+		C0ACBBDF1B7D69420082B545 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0ACBBDE1B7D69420082B545 /* MediaPlayer.framework */; };
+		C0ACBBE11B7D6AF80082B545 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0ACBBE01B7D6AF80082B545 /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +100,12 @@
 		C013CB1F1B743B3A00AFD797 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = eyes/Info.plist; sourceTree = SOURCE_ROOT; };
 		C013CB241B743F1900AFD797 /* VideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		C013CB271B744DC500AFD797 /* TestServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestServiceViewController.swift; sourceTree = "<group>"; };
+		C013CB2F1B7C301100AFD797 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C013CB341B7C326200AFD797 /* VideoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewCell.swift; sourceTree = "<group>"; };
+		C0ACBBD71B7D66E40082B545 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		C0ACBBDC1B7D69360082B545 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C0ACBBDE1B7D69420082B545 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C0ACBBE01B7D6AF80082B545 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0ACBBE11B7D6AF80082B545 /* AVKit.framework in Frameworks */,
+				C0ACBBDF1B7D69420082B545 /* MediaPlayer.framework in Frameworks */,
+				C0ACBBDD1B7D69360082B545 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +139,9 @@
 		C013CAAC1B74359F00AFD797 = {
 			isa = PBXGroup;
 			children = (
+				C0ACBBE01B7D6AF80082B545 /* AVKit.framework */,
+				C0ACBBDE1B7D69420082B545 /* MediaPlayer.framework */,
+				C0ACBBDC1B7D69360082B545 /* AVFoundation.framework */,
 				C013CAB71B74359F00AFD797 /* eyes */,
 				C013CACE1B74359F00AFD797 /* eyesTests */,
 				C013CAD91B74359F00AFD797 /* eyesUITests */,
@@ -185,7 +203,10 @@
 				C013CB111B74381800AFD797 /* Services */,
 				C013CAEB1B7435F600AFD797 /* DetailViewController.swift */,
 				C013CB271B744DC500AFD797 /* TestServiceViewController.swift */,
+				C013CB2F1B7C301100AFD797 /* TableViewController.swift */,
 				C013CAEC1B7435F600AFD797 /* MasterViewController.swift */,
+				C013CB341B7C326200AFD797 /* VideoViewCell.swift */,
+				C0ACBBD71B7D66E40082B545 /* VideoPlayerViewController.swift */,
 			);
 			path = Bussiness;
 			sourceTree = "<group>";
@@ -415,11 +436,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C013CB351B7C326200AFD797 /* VideoViewCell.swift in Sources */,
 				C013CAF41B7435F600AFD797 /* AppDelegate.swift in Sources */,
 				C013CAF51B7435F600AFD797 /* DetailViewController.swift in Sources */,
 				C013CAF61B7435F600AFD797 /* MasterViewController.swift in Sources */,
+				C013CB301B7C301100AFD797 /* TableViewController.swift in Sources */,
 				C013CB131B74381800AFD797 /* BaseService.swift in Sources */,
 				C013CB281B744DC500AFD797 /* TestServiceViewController.swift in Sources */,
+				C0ACBBD81B7D66E40082B545 /* VideoPlayerViewController.swift in Sources */,
 				C013CAFD1B74364600AFD797 /* SwiftyJSON.swift in Sources */,
 				C013CB251B743F1900AFD797 /* VideoModel.swift in Sources */,
 			);
@@ -653,6 +677,7 @@
 				C013CAE11B74359F00AFD797 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C013CAE21B74359F00AFD797 /* Build configuration list for PBXNativeTarget "eyesTests" */ = {
 			isa = XCConfigurationList;
@@ -661,6 +686,7 @@
 				C013CAE41B74359F00AFD797 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C013CAE51B74359F00AFD797 /* Build configuration list for PBXNativeTarget "eyesUITests" */ = {
 			isa = XCConfigurationList;
@@ -669,6 +695,7 @@
 				C013CAE71B74359F00AFD797 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

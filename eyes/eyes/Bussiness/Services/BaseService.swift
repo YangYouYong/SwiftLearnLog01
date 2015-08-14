@@ -11,7 +11,14 @@ import Alamofire
 
 struct BaseAPI {
     let host:String = "http://baobab.wandoujia.com"
-    let videoListUrl: String = "/api/v1/feed?num=10&date=20150807&vc=67"
+//    let videoListUrl: String = "/api/v1/feed?num=10&date=20150813&vc=67"
+    let videoListUrl:String = {
+        var today = NSDate()
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        var dateString = dateFormatter.stringFromDate(today)
+        return "/api/v1/feed?num=10&date=\(dateString)&vc=67"
+    }()
 }
 
 class BaseService: NSObject {
@@ -37,10 +44,21 @@ class BaseService: NSObject {
                     }
                 }
             }else{
-//                print("noData,\(error)")
                 completionHandler(models: nil, error)
             }
             
+        }
+    }
+    
+    // 图片下载
+    func DownloadImageForUrl(imageUrl url: String, completionHandler: (imageData: NSData?, NSError?) -> Void) {
+        Alamofire.request(.GET, URLString: url).response {
+            (_, _, data, error) in
+            if data != nil {
+                completionHandler(imageData: data as? NSData, nil)
+            }else{
+                completionHandler(imageData: nil, error)
+            }
         }
     }
 
